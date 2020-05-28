@@ -1,0 +1,423 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchFlightDemo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822,3724.66666666667" sap2010:WorkflowViewState.IdRef="SearchFlightDemo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchFlightDemo" sap:VirtualizedContainerService.HintSize="832,3560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://www.goibibo.com/" Name="URL" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="790,4199.33333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[URL]">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="756,4096.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Object" Default="[&quot;Flights booking option not available.&quot;]" Name="ErrorGuess1" />
+              <Variable x:TypeArguments="x:String" Default="Hyderabad" Name="place1" />
+              <Variable x:TypeArguments="x:Object" Default="[&quot;Expected Source is not available in the list.&quot;]" Name="ErrorGuess2" />
+              <Variable x:TypeArguments="x:String" Default="Chennai" Name="place2" />
+              <Variable x:TypeArguments="x:Object" Default="[&quot;Expected destination is not available in the list.&quot;]" Name="ErrorGuess3" />
+              <Variable x:TypeArguments="x:String" Name="dt_val1" />
+              <Variable x:TypeArguments="x:String" Name="depDate" />
+              <Variable x:TypeArguments="x:String" Name="fromAndTo" />
+              <Variable x:TypeArguments="x:String" Name="aabcd" />
+              <Variable x:TypeArguments="x:String" Name="pgtitle1" />
+              <Variable x:TypeArguments="x:String" Name="pgtitle2" />
+              <Variable x:TypeArguments="x:String" Name="ababa" />
+              <Variable x:TypeArguments="x:String" Name="displayDate" />
+              <Variable x:TypeArguments="x:String" Name="FromJ" />
+              <Variable x:TypeArguments="x:String" Name="Toj" />
+              <Variable x:TypeArguments="x:String" Name="SelectedDate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'I'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b40b4138-c697-476a-b18d-261de0b7fb71" InformativeScreenshot="8ea902b18d0a3e8a168425ab9b1b146b" Selector="&lt;webctrl idx='1' tag='LI' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="True" sap:VirtualizedContainerService.HintSize="714,256.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="782d1f1e-c840-4cbc-b459-7fa2b7c9ed90" InformativeScreenshot="8ea902b18d0a3e8a168425ab9b1b146b" Selector="&lt;webctrl idx='1' tag='LI' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[ErrorGuess1]" />
+              </If.Else>
+            </If>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  gosuggest_inputS...'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[place1]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6aac6100-3dc4-4f40-85b0-cf6c4f0be665" InformativeScreenshot="911e453959b18aac87ac6d3e13ecdf49" Selector="&lt;webctrl id='gosuggest_inputSrc' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5aa8e1c-8558-47a5-89b4-053a6aa5cf1a" InformativeScreenshot="d2013858953695de30451e227498eb2f" Selector="&lt;webctrl idx='1' parentid='react-autosuggest-1-suggestion--0' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="True" sap:VirtualizedContainerService.HintSize="714,256.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="48d5f685-7ea6-41b9-811d-bcd50b7f9d1b" InformativeScreenshot="354ef9da5065eea5fa567a34ecdc71b3" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div' idx='2' parentid='react-autosuggest-1-suggestion--0' tag='DIV' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[ErrorGuess2]" />
+              </If.Else>
+            </If>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  gosuggest_inputD...'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[place2]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46d6fc50-01e7-4fad-92f2-31b15b321484" InformativeScreenshot="f544c2d4a834c28506708988a590219f" Selector="&lt;webctrl id='gosuggest_inputDest' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70708f4b-ce0f-47fe-b2c4-9fbee5f00e48" InformativeScreenshot="e2a6084fe175cca1d7046e5950a1bc7f" Selector="&lt;webctrl idx='1' parentid='react-autosuggest-1-suggestion--0' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="True" sap:VirtualizedContainerService.HintSize="714,256.666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a670f82a-377d-4c8d-9110-d5dd9eb19a27" InformativeScreenshot="23649a0ac840f75ff2700443d720f6e4" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div' idx='2' parentid='react-autosuggest-1-suggestion--0' tag='DIV' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[ErrorGuess3]" />
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  departureCalendar'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b52c4cf2-8216-4d39-b8a5-03e8efc9bd49" InformativeScreenshot="5c5ce874738e3a6bf2c3b7196dee9a60" Selector="&lt;webctrl id='departureCalendar' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="714,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please Enter Journey Date" Title="Jouney Date">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[dt_val1]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <Assign sap:VirtualizedContainerService.HintSize="714,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[depDate]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["&lt;webctrl id='fare_2020" &amp; dt_val1 &amp; "' tag='DIV' /&gt;"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV  fare_20200529'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2051181-3bbe-454b-be99-135276e69c61" InformativeScreenshot="752ed5379e56eb9d10830d682f6f2cb7" Selector="[depDate]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get Attribute 'INPUT  departureCalendar'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="GetAttribute_7">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[SelectedDate]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a736904f-53aa-4373-994c-398565fbeff0" InformativeScreenshot="a3352b8dda4de9cd14968992f6f86bc3" Selector="&lt;webctrl id='departureCalendar' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  gi_search_btn'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb8e3675-9a00-4007-91d7-f9cc63e4903e" InformativeScreenshot="5461cf3dea227da999432704d2259644" Selector="&lt;webctrl id='gi_search_btn' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="714,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get Attribute 'INPUT  start-date_srp'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="GetAttribute_8">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[displayDate]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6fa23ee3-0884-4ae3-abb4-7c0facb3c54b" InformativeScreenshot="3b97becbbfbd826447f4e4cfc982e79a" Selector="&lt;webctrl id='start-date_srp' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[displayDate = SelectedDate]" sap:VirtualizedContainerService.HintSize="714,62.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyExpression_3" TakeScreenshotInCaseOfFailingAssertion="False" />
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get Attribute 'INPUT  gi_source_st_srp'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="GetAttribute_9">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[FromJ]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70b8b786-c4cf-414c-a009-2dc5eecc3a2d" InformativeScreenshot="84cd40c4338147895d969ee3454e4758" Selector="&lt;webctrl id='gi_source_st_srp' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[FromJ = place1]" sap:VirtualizedContainerService.HintSize="714,62.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" />
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get Attribute 'INPUT  gi_destination_s...'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="GetAttribute_10">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[Toj]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eec9eaa-2063-4b81-bad1-6f6539803578" InformativeScreenshot="e2f4006db3fd486abe927ea70f45b0ea" Selector="&lt;webctrl id='gi_destination_st_srp' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[Toj = place2]" sap:VirtualizedContainerService.HintSize="714,62.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" />
+            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="714,590.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="FlightsOptions" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'FlightTic Page'" sap:VirtualizedContainerService.HintSize="434,498.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="3d9ec1503e2d05489eb5eb104487da2f" Selector="&lt;html app='chrome.exe' title='Flight Tickets, Flights Booking at Lowest Airfare, Book Air Tickets-Goibibo' /&gt;">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,352.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[FlightsOptions]" DisplayName="Extract Structured Data 'DIV  content'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;/row&gt;&lt;column exact='1' name='FlightName' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='dF width100 alignItemsCenter' idx='1'/&gt;&lt;webctrl tag='span' class='ico13 padR10 padL5' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='PlaceFrom' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12 col-sm-12 col-xs-12 padLR0 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12  col-sm-12 col-xs-12 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF alignItemsEnd' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-3 col-sm-3 col-xs-3 padL0 fGS0' idx='1'/&gt;&lt;webctrl tag='span' class='db flexCol' idx='1'/&gt;&lt;webctrl tag='span' class='db textOverflow' idx='1'/&gt;&lt;webctrl tag='span' class='ico11 greyLt padL5' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='PlaceTo' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12 col-sm-12 col-xs-12 padLR0 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12  col-sm-12 col-xs-12 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF alignItemsEnd' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-3 col-sm-3 col-xs-3 fGS0 width29' idx='1'/&gt;&lt;webctrl tag='span' class='db flexCol' idx='1'/&gt;&lt;webctrl tag='span' class='db textOverflow' idx='1'/&gt;&lt;webctrl tag='span' class='greyLt ico11 padL5' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='DepartureTime' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12 col-sm-12 col-xs-12 padLR0 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12  col-sm-12 col-xs-12 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF alignItemsEnd' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-3 col-sm-3 col-xs-3 padL0 fGS0' idx='1'/&gt;&lt;webctrl tag='span' class='db flexCol' idx='1'/&gt;&lt;webctrl tag='span' class='fb ico18 padT5 quicks' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='TravelTime' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12 col-sm-12 col-xs-12 padLR0 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12  col-sm-12 col-xs-12 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF alignItemsEnd' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-4 col-sm-4 padL0 col-xs-4 fGS0' idx='1'/&gt;&lt;webctrl tag='div' class='ico15 fb txtCenter quicks padT5' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Fare' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-4 col-xs-4 col-sm-4 padLR0 justifyEnd dF ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-7 padL0 padR10 justifyBetween flexCol ' idx='1'/&gt;&lt;webctrl tag='span' class='alignItemsEnd flexCol' idx='1'/&gt;&lt;webctrl tag='span' class='alignItemsCenter dF padT2' idx='1'/&gt;&lt;webctrl tag='span' class='ico20 fb quicks' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='ArrivalTime' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='paleGreyBg2 width100 fl' idx='1'/&gt;&lt;webctrl tag='div' class='fltHpyWrp padT10 marginT20' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='fltHpyResults intRnd' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' class='marginB10' idx='1'/&gt;&lt;webctrl tag='div' class='clr'/&gt;&lt;webctrl tag='div' class='flexCol whiteBg brdrRd5 fltHpyRsltCard brdrRd5 marginT10' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 flexCol' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF padLR20 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-8 col-sm-8 col-xs-8 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='flexCol width100 padT5 ' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12 col-sm-12 col-xs-12 padLR0 padT10' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-12  col-sm-12 col-xs-12 padLR0' idx='1'/&gt;&lt;webctrl tag='div' class='fl width100 dF alignItemsEnd' idx='1'/&gt;&lt;webctrl tag='div' class='col-md-3 col-sm-3 col-xs-3 fGS0 width29' idx='1'/&gt;&lt;webctrl tag='span' class='db flexCol' idx='1'/&gt;&lt;webctrl tag='span' class='fb dF alignItemsCenter ico18 padT5 quicks' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:ExtractData.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6302bcef-d052-4543-85b6-a2212aab543f" InformativeScreenshot="cbfb89959a336c476931d36acb0452ce" Selector="&lt;webctrl id='content' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:ExtractData.Target>
+                      </ui:ExtractData>
+                      <ui:WriteRange AddHeaders="True" DataTable="[FlightsOptions]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Flights_SearchResults_DataScraping.xlsx" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+              </ui:BrowserScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

@@ -1,0 +1,258 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddPassenger" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="691.333333333333,2701.33333333333" sap2010:WorkflowViewState.IdRef="AddPassenger_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AddPassenger" sap:VirtualizedContainerService.HintSize="701.333333333333,2536.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" DisplayName="Use Browser Chrome: https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" sap:VirtualizedContainerService.HintSize="659.333333333333,2444.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="625.333333333333,2226.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="CountryCode" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  Adulttitle1'" sap:VirtualizedContainerService.HintSize="583.333333333333,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Mr">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Title</x:String>
+                  <x:String>Mr</x:String>
+                  <x:String>Mrs</x:String>
+                  <x:String>Ms</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1af3cd4-6df6-43a3-bd83-279b4a2225b5" InformativeScreenshot="e569f32aadd872411e34ea25879e2c01" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*' /&gt;&lt;webctrl id='Adulttitle1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  AdultfirstName1'" EmptyField="True" sap:VirtualizedContainerService.HintSize="583.333333333333,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="Peter">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="08820625-eb35-4dd7-9a0e-3a162016e811" InformativeScreenshot="a000921c38ea0bc6c1119675fbd4d2c5" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*' /&gt;&lt;webctrl id='AdultfirstName1' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <uix:NTypeInto DelayBetweenKeys="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'reddy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="583.333333333333,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="Morphy">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" DesignTimeRectangle="647, 316, 251, 57" ElementType="InputBox" FriendlyName="'reddy'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='AdultmiddleName1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='AdultmiddleName1' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP8AAAA9CAYAAABiKL91AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUuSURBVHhe7Z3Pa9tIGIb9T/oiCAiDodQURGBzWNODCYge9hBTWAcilsU9JIe0UB9C9uBAMZQUgiB4YfGy9qEEgsOCIcgEguHrzGjGlj7L29ZkYVff+8AL0mg8yuWZnyqtzOdzQhBEXiA/gghNZTweL2/0dRzHdHV1hSBIiaK95q5X9AN9ocN/gCBIuZJ13civewU34idJQgCAcqG95q4b+bMBAJQT7jrkB0AI3HXID4AQuOuQHwAhcNchPwBC4K5DfgCEwF2H/AAIgbsO+QEQAncd8gMgBO465AdACNx1yA+AELjrkB8AIXDXIT8AQuCuQ34AhMBdh/wACIG7DvkBEAJ3HfIDIATuOuQHQAjc9f+s/MOjKlWrTTq/swX/yJTOf9T1IxraEgBAHu465AdACNx1yA+AELjrkB8AIXDXv1/+u3NqVqvUPJvQ5H1Ivqek26lT692EHm0Vuovp+FWQPlN1vVpA4UlM04V9niWZUP+wRfUdWzcI6TieUbxJ/r+zbXvkv+xQ/69JXv7FiLo1de+p+6J33vQoUO/yfx3ZAgDKD3d9a/kbuwF5XoPCw4g6SsbOp1T95DqiunquxQxedSj6JaL2S588LfZzJWP2vwVIhhQ9cxK3M3U91bYuZ/Lfqndb6dO2OxQGnrlP669G/tEb35S37d+V5ea0oZ416O1nWwCAALjrW8tfrQbr8iSX1NYS1kLq39oyy+xj23QK/tHQzhAe1dQ+FbR5NjUljulZ03QWefnd1L5O0XWuB1Ht1FV5Xn43unuvL1czEoOdFez26MaWACAB7vr28r94uyZP8iE0ErYuZrYki5O3TZcP6nahRn3dURS0o8yl3q6um5HfvfeAy6x4sJ1Obs3v2rDvc/zRJX/j3whAeeGuby//z7EtWJFu0lXVlDwyU3ieMNDPfer+qSrf9mhPt6NmAkWk0/aM/HHHtM1nCSkJDULddlZ+Ndu4aJnfhB9WM4XhkV4mhDS4twUACIG7vr38BdI6+b+W6FpVvo7S+w3y66l/Vv70fpP87t15+el+QKF+x36fzDhvZwjrSwEAyg93/V+Q/xs30r4y8qebct868j/S5UGB/Lr8tR7pW9RX9j9+apvNRNP5ACAM7vqTyu9G5+B90VaaXoN75D9v00APw27NX+vSaO04bkb9fS1zwZrfjeJZ3NHemvxOeL3Gn6YdROH7ACg/3PUnlZ9mapqthfaa1GP+ux18Lxws5R290bv0HjVPJ2rVvsKdDOTkV78ahHoUr1P7Y1b/hCan7nRgXf5lx7Afmr+tuGMCoPxw159WfsVMjbSbzvmrOy06zx4BPozo+ActdPpxT2dZ16P6M7bhp7kb0E+57wLcOX9d1dflBfIr0s1D/TxY65QAkAJ3/cnlN5gv/PaWX+2ZLwAP+zQp2mFfTCk+CSmo2U6g3qLOxYQmbMNvyX32i0DVCexmvwgslt+d+RcuGQAQAnf9++X/P2Llzx75ASAN7nr55V8kNDhQswqPfewDgDC46+WV//cuNV40qGGWEx41fyv+PgAAKXDXyyu/murvmZMHn5ono9xpAgAS4a7LWPMDAHKe60B+AITAXYf8AAiBuw75ARACdx3yAyAE7jrkB0AI3HXID4AQuOuQHwAhcNchPwBC4K5DfgCEwF2H/AAIgbsO+QEQAncd8gMgBO465AdACNx1I38cxyb6Oknwj18BKBvaa+66kX88HpvoawRBypus6xV9MZ/PTfS16xUQBClPtNfc9Yq7QRBEViA/gojMnL4ARV1y4dYvq4oAAAAASUVORK5CYII=" InformativeScreenshot="d2ccc7ee520da562d889c1afa30c5f32.png" SearchSteps="FuzzySelector, Image" Text="reddy" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='text' /&gt;" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto DelayBetweenKeys="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'lingala'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="583.333333333333,230" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="Degon">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" DesignTimeRectangle="898, 316, 251, 57" ElementType="InputBox" FriendlyName="'lingala'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='AdultlastName1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='AdultlastName1' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP8AAAA9CAYAAABiKL91AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUhSURBVHhe7Z3fa9tWGIb7T/pGEDABgcEMTCC+qDEkDExhY0Q3cyAmF75xL7ZBwyi+cWE4lAyCoHgQWmr3xlAcBoGgUAiGd+eTzufIsrOEtDOazvvAC9bRkY568ZxfEumzm5sbMAzjXig/wziaZ+PxeHEgv8MwxPn5OcMwBYp4nXY9ll9OSKEkewHDMMVKugOI5ZdeQUf8KIpACCkW4rW6viR/OoSQYqKOU35CHEMdp/yEOIY6TvkJcQx1nPIT4hjqOOUnxDHUccpPiGOo45SfEMdQxyk/IY6hjlN+QhxDHaf8hDiGOk75CXEMdZzyE+IY6jjlJ8Qx1HHKT4hjqOOUnxDHUMcpPyGOoY5TfkIcQx1/uvyXfTRKJZSORrYAGB2Z41ID/UtbkCtm6D+X5+vg7okJcQ91nPIT4hjq+DeVP99QfkIEdZzyE+IY6vg3lX912m+Fe97HbD7F8HAf/pbUKcHz99F+M8G6PxB+FfbQ2inDk/t7ZdQO+phEI3TkWO5l68XMZwhftlD3vfi+yb3raL0MTZu2Tsz98kcfB2jvVVH2kuulzepeG4OP/PPlpHio45uRf7eNTtODt11D67CDzkFjIVrj9ZLKmL1uLKRvHJi6hy3UpMOo+PClPC2/dAgVuY+HcjNA5zhV39T1WkNc2ar3yb9ob8s+m7lH0LQdT8lH94OtSEhBUMc3I7+I2JTR3xYLn0+S67e7eG+LcDXAvpRVOgivbZkQTdCz90nLP31VM2XeSgcCM8v4dUfqm2f525atk//LGQLphEx7o8wgH70N4g7AO87OEwj5f6OOb0j+8poRdFXGROYSgre3tiTFRRflJfmvMPjJTNW3zPVL0/uE+58lJf9FD1WzXFjpPIQ1/z5CioA6viH5WximR/KYrIwRhq3s9SnmIdpL8qeY3yK6nuL9eYjBb2bavufbafsD8qe4jSLMPo0QnvbRk6XDtt1DoPykYKjjG5J/nXDZc3ocIFwzkpu7r274meVA/6BmRb+LbCbWa/L74We5CrtoqOga2WRs1pOZBuUnBUMdz5H8D4z8K/Kb65sirYf6z30MP0zN6B/h1nYcj3mW2786ySZiZR+9NyNMLiNEX+xJTvtJQVHHcyS/WfP/UjXHj1zza/vfD1I7+ore+9+fJXneMroXtiDNu04yo6D8pGCo47mSf3HP7G7/fIqTeJQ357Lyf9fDJLNMmP5uX989Sv4SfjzNbPVfh/YVognlJwVDHc+X/Ia79+4+9lPv+b2Kn9ntN9fbDsHbbiCQd/zHgV2/+6jvluNznXdxZcNqe4tpv1k61F6043f87RfJHoK3W0dtqT1CioE6njv5hewXfo3DIaZT297BGRaLgmiCQeqrwbjDOOxjJO3baXvt1TSpe097S23Jx0I7LfROp4jmtr4X4Ez3AQgpAOr40+XfNJ9PUDeC8qMbQr4OdTxX8kd/tMwUvorgNLOFN48QHvnxyBz8uWYzkBDyaNTxfI380RmCeArvwd+z3+ov1vEl+D8Muf4m5CtRx/Mlv3CdrOOriw9v0utwW4cQ8mTU8fzJTwj5T1HHKT8hjqGOU35CHEMdp/yEOIY6TvkJcQx1nPIT4hjqOOUnxDHUccpPiGOo45SfEMdQxyk/IY6hjlN+QhxDHaf8hDiGOk75CXEMdZzyE+IY6viS/GEYxpHfUcT/pJKQoiFeq+tL8o/H4zjym2GY4kY8X8ifPpDfOgNgGKY4Ea/Trsfypw8YhnEnlJ9hnMwN/gEihjK4uZd91QAAAABJRU5ErkJggg==" InformativeScreenshot="f03f00d406c24170b53fbc80feddb669.png" SearchSteps="FuzzySelector, Image" Text="lingala" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='text' /&gt;" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Text 'Mobile Number'" sap:VirtualizedContainerService.HintSize="583.333333333333,168" sap2010:WorkflowViewState.IdRef="NGetText_3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" DesignTimeRectangle="298, 543, 124, 57" ElementType="DropDown" FriendlyName="'India ( +91 )'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobilecode' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobilecode' tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="009cf0d414688f104ef8f2d518c950c9.png" SearchSteps="FuzzySelector" Text="India ( +91 )" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SELECT' type='' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="94, 558, 142, 23" ElementType="Text" FriendlyName="'Mobile Number'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='LABEL' type='' aaname='Mobile Number' check:text='Mobile Number' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Mobile Number" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[CountryCode]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="583.333333333333,455.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546.666666666667,376.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[CountryCode &lt;&gt; &quot;India ( +91 )&quot;]" sap:VirtualizedContainerService.HintSize="504.666666666667,284.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  mobilecode'" sap:VirtualizedContainerService.HintSize="358.666666666667,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="India ( +91 )">
+                        <ui:SelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="50">
+                            <x:String>Afghanistan ( +93 )</x:String>
+                            <x:String>Aland Islands ( +358 )</x:String>
+                            <x:String>Albania ( +355 )</x:String>
+                            <x:String>Algeria ( +213 )</x:String>
+                            <x:String>AmericanSamoa ( +1684 )</x:String>
+                            <x:String>Andorra ( +376 )</x:String>
+                            <x:String>Angola ( +244 )</x:String>
+                            <x:String>Anguilla ( +1264 )</x:String>
+                            <x:String>Antarctica ( +672 )</x:String>
+                            <x:String>Antigua and Barbuda ( +1268 )</x:String>
+                            <x:String>Argentina ( +54 )</x:String>
+                            <x:String>Armenia ( +374 )</x:String>
+                            <x:String>Aruba ( +297 )</x:String>
+                            <x:String>Australia ( +61 )</x:String>
+                            <x:String>Austria ( +43 )</x:String>
+                            <x:String>Azerbaijan ( +994 )</x:String>
+                            <x:String>Bahamas ( +1242 )</x:String>
+                            <x:String>Bahrain ( +973 )</x:String>
+                            <x:String>Bangladesh ( +880 )</x:String>
+                            <x:String>Barbados ( +1246 )</x:String>
+                            <x:String>Belarus ( +375 )</x:String>
+                            <x:String>Belgium ( +32 )</x:String>
+                            <x:String>Belize ( +501 )</x:String>
+                            <x:String>Benin ( +229 )</x:String>
+                            <x:String>Bermuda ( +1441 )</x:String>
+                            <x:String>Bhutan ( +975 )</x:String>
+                            <x:String>Bolivia, Plurinational State of ( +591 )</x:String>
+                            <x:String>Bosnia and Herzegovina ( +387 )</x:String>
+                            <x:String>Botswana ( +267 )</x:String>
+                            <x:String>Brazil ( +55 )</x:String>
+                            <x:String>British Indian Ocean Territory ( +246 )</x:String>
+                            <x:String>Brunei Darussalam ( +673 )</x:String>
+                            <x:String>Bulgaria ( +359 )</x:String>
+                            <x:String>Burkina Faso ( +226 )</x:String>
+                            <x:String>Burundi ( +257 )</x:String>
+                            <x:String>Cambodia ( +855 )</x:String>
+                            <x:String>Cameroon ( +237 )</x:String>
+                            <x:String>Canada ( +1 )</x:String>
+                            <x:String>Cape Verde ( +238 )</x:String>
+                            <x:String>Cayman Islands ( +345 )</x:String>
+                            <x:String>Central African Republic ( +236 )</x:String>
+                            <x:String>Chad ( +235 )</x:String>
+                            <x:String>Chile ( +56 )</x:String>
+                            <x:String>China ( +86 )</x:String>
+                            <x:String>Christmas Island ( +61 )</x:String>
+                            <x:String>Cocos (Keeling) Islands ( +61 )</x:String>
+                            <x:String>Colombia ( +57 )</x:String>
+                            <x:String>Comoros ( +269 )</x:String>
+                            <x:String>Congo ( +242 )</x:String>
+                            <x:String>Congo, The Democratic Republic of the Congo ( +243 )</x:String>
+                          </scg:List>
+                        </ui:SelectItem.Items>
+                        <ui:SelectItem.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f0a878ba-06f1-4b8a-a5a7-212241b280f6" InformativeScreenshot="042d858303cee53deeec41f68641b900" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*' /&gt;&lt;webctrl id='mobilecode' tag='SELECT' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SelectItem.Target>
+                      </ui:SelectItem>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <uix:NGetText DisplayName="Get Text 'Mobile Number'" sap:VirtualizedContainerService.HintSize="583.333333333333,168" sap2010:WorkflowViewState.IdRef="NGetText_2">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" DesignTimeRectangle="298, 543, 124, 57" ElementType="DropDown" FriendlyName="'India ( +91 )'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobilecode' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobilecode' tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="009cf0d414688f104ef8f2d518c950c9.png" SearchSteps="FuzzySelector" Text="India ( +91 )" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SELECT' type='' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="94, 558, 142, 23" ElementType="Text" FriendlyName="'Mobile Number'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='LABEL' type='' aaname='Mobile Number' check:text='Mobile Number' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Mobile Number" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[CountryCode]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uta:VerifyExpressionWithOperator ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="583.333333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_2" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False">
+              <uta:VerifyExpressionWithOperator.FirstExpression>
+                <InArgument x:TypeArguments="x:String">[CountryCode]</InArgument>
+              </uta:VerifyExpressionWithOperator.FirstExpression>
+              <uta:VerifyExpressionWithOperator.SecondExpression>
+                <InArgument x:TypeArguments="x:String">["+91"]</InArgument>
+              </uta:VerifyExpressionWithOperator.SecondExpression>
+            </uta:VerifyExpressionWithOperator>
+            <uix:NTypeInto DelayBetweenKeys="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '+91'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="583.333333333333,230" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="9898989898">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=4&amp;t=dc0912ca71c5aa1eed05de4b0f37d792" DesignTimeRectangle="422, 543, 372, 57" ElementType="InputBox" FriendlyName="'8790741539'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobile' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl id='mobile' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="92d3155fde84314cad19a438e5c3ee26.png" SearchSteps="FuzzySelector, Image" Text="8790741539" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="318, 553, 36, 30" ElementType="Text" FriendlyName="'+91'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=4&amp;amp;t=dc0912ca71c5aa1eed05de4b0f37d792' /&gt;&lt;webctrl parentid='cont_mobile' tag='SPAN' type='' aaname='+91' check:text='+91' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAiCAYAAAAtZZsLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHxSURBVFhH7ZW/S8NAFMf9J7McCCUQEEOhOBQxdAhCRjE4KDSI1KEd6qA4ZOkggnSQgHTq0ikgLUKhBAQpfH2XvkqiTateox3ygQx59+7eJ/crW9hwCkFVCkFVCkFVCkFV1AWnYwQtBxVdQNM0aNsG7LMOBhNuX8oQfo361Xv8/hU1wSkXIDGhW3DPPXjHVYhY1Ib/zHkZhLfWLDcvwfC6MpOr+RhOOSgJb2AJKrx3hTAZnzON0LvkD/m9IM3OAXU+oOIcSdNHQ5cFbHTGHEoQtk1qE/CeODBnFKCxL2ddwDy0YOYmOLmHIwfPan/y4tkx2yEHJDwmydnXA0QjH1Zugi88+ArBdPEhOmcNBCN+zVUQPXhynwkPvQX7bL4/lxX/oSAVlMkrHxLiHv1LI44Z9QBRUvKZCkt5mb8+wT6aZRNm4inFM1RKxcxykzKZiD5q9/M1Y1E/geqFN9uj6xP8zKolZuguDC5sGNuUK0UrDpqP1IOLi/P/FswiOI2FnbuIAwvIV3CM+6MSXbYuuq8c+uAN3RO59IvvyA/ynsH5SbVu0xnjBxcGxcVJl1SXoCb4DV7pkOxQAbp4SzUXHh0StyZnleR26bQvWd2Y3AUl0YAu38Qh0StwWkH635zFnwjmTCGoSiGoSiGoSiGoyoYLAu+2CClMziM5KAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="+91" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIcSURBVDhPjZPLa1NBFMbvyvwL/g+CG5tExRcoJAsVceVKKVhzFWuxCj4XikXdiNbHRhdaIW5EsqjiG1Ghiq1d1Adtwdq0xTeld25ukvvK5zln5oZGKnTgx52Ze75vzpyZsZKmChlL2ZmUU8jkiDvEFBEYuM9zOWVnU4RRUav3bLToh+XY2aX07SVmCfwH/tdrYkUrYlWQiRLRIBYSzodjSomJ5drZJdThlXXAnjTRZr5Ec57niGRMGtZyBnnij55MQx3OwT2+Dap7E/XzoJXg7F8L9+R2uMe2wtm7KjFmTZ4NiiIm98oFG1F5FPH3r4i+jCD8OIDK2V0IBp8g/j0j1B/egupcJ4uxlg3KYrBvNYLhF4gmPsC73IVw5DXiH2UEA/2Iv03Au9oN/+U9NII6vCsH4XSsYIMyG/iSetcGRJOfUX/Uh7mdy1C7exHxrxnJJHj3GHPty+FdOwTEMWrF83B2i4FvDCgD2hsHRlNjqPadQTQ+TBlMUgb3yWga1ds9CIaeoeHX4F3qTDIQA70FKox7egeCNw+E8NNbRNPjugbvnyOe/alr0H+dirqGxc0tmCKmUTnXjuqNE6jePCWF9F+VWk/h6BYaryRh83iliPoYO9pkj+HoIMKxIfhPi1BHNpsjI5K7oYWMPsaWi0SrqQPrBRm3Cv6leZGI+VfZrLiwiGm9ysljMu9hUY/JxOrHlLTFP+dMimN1s6y/J/iCuQwa9fYAAAAASUVORK5CYII=" InformativeScreenshot="6c025d69f95ac32b41e371430161bf11.png" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

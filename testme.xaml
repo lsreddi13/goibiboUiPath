@@ -1,0 +1,118 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testme" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="656.666666666667,1020.66666666667" sap2010:WorkflowViewState.IdRef="testme_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testme" sap:VirtualizedContainerService.HintSize="476,816" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="getTextVal" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard CloseMode="{x:Null}" DisplayName="Use Browser Chrome: https://www.goibibo.com/flight-review/?ls=7&amp;t=8164783db8f6a739a0523c79d9817fd6" sap:VirtualizedContainerService.HintSize="434,724" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="376,506" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text '&lt;meta HTTP-EQUIV=&quot;refre…'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NGetText_1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.goibibo.com/flight-review/?ls=7&amp;t=8164783db8f6a739a0523c79d9817fd6" DesignTimeRectangle="156, 360, 556, 27" ElementType="Text" FriendlyName="'Hyderabad -'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=7&amp;amp;t=8164783db8f6a739a0523c79d9817fd6' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='1' isleaf='1' parentid='content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=7&amp;amp;t=8164783db8f6a739a0523c79d9817fd6' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' type='' isleaf='1' parentid='content' tag='SPAN' aaname=' Hyderabad - Chennai Saturday, 30 May 2020 ' /&gt;" InformativeScreenshot="8e8e04827c0fdcfdbcee138d7b1af0bb.png" SearchSteps="FuzzySelector" Text="Hyderabad - Chennai Saturday, 30 May 2020" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='SPAN' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="108, 361, 47, 31" FriendlyName="'&lt;meta HTTP-EQUIV=&quot;refre…'" FullSelectorArgument="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/?ls=7&amp;amp;t=8164783db8f6a739a0523c79d9817fd6' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAfCAYAAAB3XZQBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHsSURBVFhH7ZdBSwJRFIX7Q+5c9Qvc+QfctRDdiYskBDfVJle2EFxIEOTKzVCIJEIGksqQEWpIZcRYhCBmBIMwnJ4zTxtE8b1pHo/AA2fh28w3d85997oFGZp0kQwp8ESv0dTpmQPJgYeBZobABxX4s49wyi8Jnui+Ch+B9wTPkbpzhi8PHj1kIlb1zfh802MOSYQHtHzBgp/GJ9Pljo9UeLw2EKDw0/gkb/nKLxceI1wczuCJOePjPrzRxUm2i7FBf6/RuFT6hSf2pdnjI6DyI1wecWRYb+HABm/Gp85WfiGx0ZSiCRI47TG8wAD5hB2eOFRGhYFfTObbsztcQVh5o4erpCEXW4An9h631r64GPhJZyEK7ns7diUGXn9XEVnyQLctpvJ9FTv0Ad79G1TqHdRWuoHd6ZJmgzIdLSGZrSK1zGcqai9fYuDHZev688ar6KxtvCUNyziwBMAbqKWnlWMdOLYdh5r1mhUAT2DiHJNyvl1Sc+z47sPrQww+Gcerba+3zLcei2lYVunkSrU1q58MNR5JhZ81tum9Bp5YPxiVRHj7RllA7pmTnEgePBlkYVr1sPJBD/kkDX7+LyqhQuMvuilJ8HQZCxWR7zskJ5IDb+jQ2mQ1eBjSA2eS2LB/1wZeljbwsvSP4YEfkWGrZ4HLsR8AAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" Text="&lt;meta HTTP-EQUIV=&quot;refresh&quot; content=&quot;0;url='https://www.goibibo.com/flight-review/?ls=7&amp;amp" TextMethod="AttributeText" TextSelector="&lt;html /&gt;" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[getTextVal]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[getTextVal]" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  risk-trip'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88a41c51-81c4-4f27-ae8a-03e5bd5f2003" InformativeScreenshot="b897f9c558ca5501db9addb82e6c3472" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*' /&gt;&lt;webctrl id='risk-trip' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIcSURBVDhPjZPLa1NBFMbvyvwL/g+CG5tExRcoJAsVceVKKVhzFWuxCj4XikXdiNbHRhdaIW5EsqjiG1Ghiq1d1Adtwdq0xTeld25ukvvK5zln5oZGKnTgx52Ze75vzpyZsZKmChlL2ZmUU8jkiDvEFBEYuM9zOWVnU4RRUav3bLToh+XY2aX07SVmCfwH/tdrYkUrYlWQiRLRIBYSzodjSomJ5drZJdThlXXAnjTRZr5Ec57niGRMGtZyBnnij55MQx3OwT2+Dap7E/XzoJXg7F8L9+R2uMe2wtm7KjFmTZ4NiiIm98oFG1F5FPH3r4i+jCD8OIDK2V0IBp8g/j0j1B/egupcJ4uxlg3KYrBvNYLhF4gmPsC73IVw5DXiH2UEA/2Iv03Au9oN/+U9NII6vCsH4XSsYIMyG/iSetcGRJOfUX/Uh7mdy1C7exHxrxnJJHj3GHPty+FdOwTEMWrF83B2i4FvDCgD2hsHRlNjqPadQTQ+TBlMUgb3yWga1ds9CIaeoeHX4F3qTDIQA70FKox7egeCNw+E8NNbRNPjugbvnyOe/alr0H+dirqGxc0tmCKmUTnXjuqNE6jePCWF9F+VWk/h6BYaryRh83iliPoYO9pkj+HoIMKxIfhPi1BHNpsjI5K7oYWMPsaWi0SrqQPrBRm3Cv6leZGI+VfZrLiwiGm9ysljMu9hUY/JxOrHlLTFP+dMimN1s6y/J/iCuQwa9fYAAAAASUVORK5CYII=" InformativeScreenshot="364af95ae233a7e5b8724c6c4f3f1c40.png" Selector="&lt;html app='chrome.exe' title='https://www.goibibo.com/flight-review/*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
