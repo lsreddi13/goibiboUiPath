@@ -566,7 +566,7 @@
                       </Sequence>
                       <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="628,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
                         <ui:GetValue.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6f19508-35ed-4aad-905e-7bfd0057ff8a" InformativeScreenshot="13354be085fdc173dd24e13a4af5480b" Selector="&lt;webctrl aaname='4,551' parentid='content' tag='SPAN' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6f19508-35ed-4aad-905e-7bfd0057ff8a" InformativeScreenshot="13354be085fdc173dd24e13a4af5480b" Selector="&lt;webctrl omit:aaname='4,551' parentid='content' tag='SPAN' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
