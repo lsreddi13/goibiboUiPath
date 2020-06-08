@@ -81,6 +81,12 @@
         "editingStatus": "InProgress",
         "testCaseId": "321722d4-da49-4290-8898-2cd47cbd098f",
         "fileName": "FlightDatascraping - Copy (1).xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "c0cc68ec-8b52-4ef5-9071-81e07f8b8dc6",
+        "dataVariationFilePath": ".variations\\Flights_details_Sheet1.json",
+        "fileName": "DataDrivenTestCase.xaml"
       }
     ]
   },

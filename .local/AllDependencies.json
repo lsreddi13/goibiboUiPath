@@ -1861,15 +1861,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sasidharl\\.nuget\\packages\\": {}
+    "C:\\Users\\sasid\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "goibibo",
       "projectName": "goibibo",
-      "projectPath": "D:\\uipath_workspace\\goibibo\\.local",
-      "packagesPath": "C:\\Users\\sasidharl\\.nuget\\packages\\",
-      "outputPath": "D:\\uipath_workspace\\goibibo\\.local"
+      "projectPath": "C:\\UiPathWorkspace\\goibibo\\goibiboUiPath\\.local",
+      "packagesPath": "C:\\Users\\sasid\\.nuget\\packages\\",
+      "outputPath": "C:\\UiPathWorkspace\\goibibo\\goibiboUiPath\\.local"
     },
     "frameworks": {
       "net461": {
